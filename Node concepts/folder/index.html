@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple HTML with CSS & JS</title>
+  <style>
+    /* CSS part */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 20px;
+    }
+    h1 {
+      color: #0077cc;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+    button {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hello, World!</h1>
+  <p id="message">This is a simple HTML page with CSS and JS.</p>
+  <button onclick="changeText()">Click me!</button>
+
+  <script>
+    // JavaScript part
+    function changeText() {
+      const p = document.getElementById('message');
+      p.textContent = "You clicked the button! 🎉";
+      p.style.color = "green";
+    }
+  </script>
+
+</body>
+</html>

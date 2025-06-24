@@ -1,0 +1,113 @@
+<!-- <!DOCTYPE html>
+<html>
+  <body>
+    <h2>Details of student</h2>
+    <p id="show"></p>
+
+    <script>
+      // Object creation
+      let student = {
+        name: "jhansi",
+        age: 21,
+        branch: "csm",
+        brand: "puma",
+
+        // object method
+        calculate: function () {
+          return this.brand;
+        },
+
+        // nested object
+        address: {
+          city: "vizag",
+          state: "AP"
+        },
+
+        // array inside object
+        subjects: ["maths", "science"],
+
+        // other properties
+        a: 1,
+        b: 2,
+        c: 3
+      };
+
+      Accessing Object Properties
+      Dot Notation: person.name
+      Bracket Notation: person["name"]
+      
+      // Modifying properties
+      student.name = "jhanu";
+      student["age"] = 22;
+
+      // Adding new properties
+      student.isstudent = true;
+      student.gender = "female";
+
+      // Deleting property
+      delete student.isstudent;
+
+      // Display all properties using for...in
+      let output = "";
+      for (let i in student) {
+        output += i + ": " + student[i] + "<br>";
+      }
+
+      // Displaying in HTML
+      document.getElementById("show").innerHTML = output;
+
+      // Function call
+      console.log("Brand is: " + student.calculate()); // Shows in browser console
+
+    </script>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Student Details</h2>
+    <p id="show"></p>
+
+    <script>
+      let student = {
+        name: "jhanu",
+        age: 22,
+        branch: "csm",
+        brand: "puma",
+        calculate: function () {
+          return this.brand;
+        },
+        address: {
+          city: "vizag",
+          state: "AP"
+        },
+        subjects: ["maths", "science"],
+        a: 1,
+        b: 2,
+        c: 3,
+        gender: "female"
+      };
+
+      let output = "";
+      for (let key in student) {
+        let value = student[key];
+
+        // If the value is an object (like address), stringify it
+        if (typeof value === "object" && !Array.isArray(value)) {
+          value = JSON.stringify(value);
+        }
+
+        // If it's a function, skip or show a custom message
+        else if (typeof value === "function") {
+          value =student[key]() ; // or: value = "Function";
+        }
+
+        output += key + ": " + value + "<br>";
+      }
+
+      document.getElementById("show").innerHTML = output;
+    </script>
+  </body>
+</html>

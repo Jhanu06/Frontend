@@ -1,0 +1,52 @@
+
+<!-- 1. create element- react.createElement(tagname,attributes,children) -->
+<!-- 2. render- reactdom.render(react element,container) -->        
+<!-- 3. component- function or class that returns react element -->
+<!-- 4. props- properties of component, used to pass data from parent to child component -->    
+<!-- 5. state- used to manage data within a component, can be changed using setState() method -->
+<!-- 6. lifecycle methods- methods that are called at different stages of a component's life, such as mounting, updating, and unmounting -->
+<!-- 7. hooks- functions that allow you to use state and other React features in functional components, such as useState and useEffect -->
+<!-- 8. JSX- syntax extension that allows you to write HTML-like code in JavaScript, which is then transformed into React elements -->
+<!-- 9. virtual DOM- lightweight representation of the actual DOM, used by React to optimize rendering and updates -->
+<!-- 10. componentDidMount- lifecycle method that is called after a component is mounted, used to fetch data or perform other side effects -->  
+<!-- 11. componentDidUpdate- lifecycle method that is called after a component is updated, used to perform side effects based on changes in props or state -->
+<!-- 12. componentWillUnmount- lifecycle method that is called before a component is unmounted, used to clean up resources or cancel network requests -->
+<!-- 13. controlled component- a component whose value is controlled by React state, such as an input field with a value prop and onChange handler -->
+<!-- 14. uncontrolled component- a component whose value is controlled by the DOM, such as an input field with a defaultValue prop -->
+<!-- 15. higher-order component- a function that takes a component and returns a new component with additional functionality, such as withRouter or connect --> 
+<!-- 16. context- a way to pass data through the component tree without having to pass props down manually at every level, using React.createContext and Context.Provider -->
+<!-- 17. prop drilling- the process of passing props down through multiple levels of components, which can lead to complex and hard-to-maintain code -->
+<!-- 18. error boundary- a component that catches JavaScript errors in its child components and displays a fallback UI, using the static getDerivedStateFromError and componentDidCatch lifecycle methods -->
+<!-- 19. fragment- a lightweight wrapper for grouping multiple elements without adding extra nodes to the DOM, using React.Fragment or the shorthand <> </> syntax -->
+<!-- 20. key- a special prop used to identify elements in a list, which helps React optimize rendering and updates by tracking changes to the list items -->
+<!-- 21. ref- a special prop used to access the underlying DOM element or React component instance, using React.createRef or the callback ref pattern -->
+<!-- 22. memo- a higher-order component that optimizes functional components by preventing unnecessary re-renders, using React.memo -->
+<!-- 23. useState- a hook that allows you to add state to functional components, using const [state, setState] = useState(initialValue) -->
+<!-- 24. useEffect- a hook that allows you to perform side effects in functional components, using useEffect(() => { /* effect */ }, [dependencies]) -->
+<!-- 25. useContext- a hook that allows you to access the context value in functional components, using const value = useContext(MyContext) -->
+<!-- 26. useReducer- a hook that allows you to manage complex state logic in functional components, using const [state, dispatch] = useReducer(reducer, initialState) -->
+<!-- 27. useCallback- a hook that memoizes a callback function to prevent unnecessary re-creations, using const memoizedCallback = useCallback(() => { /* callback */ }, [dependencies]) -->
+<!-- 28. useMemo- a hook that memoizes a value to prevent unnecessary re-computations, using const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]) -->
+<!-- 29. useRef- a hook that creates a mutable ref object that persists for the full lifetime of the component, using const myRef = useRef(initialValue) -->
+<!-- 30. useLayoutEffect- a hook that is similar to useEffect but runs synchronously after all DOM mutations, using useLayoutEffect(() => { /* effect */ }, [dependencies]) -->
+<!-- 31. useImperativeHandle- a hook that customizes the instance value that is exposed when using React.forwardRef, using useImperativeHandle(ref, () => ({ /* instance value */ })) -->
+<!-- 32. useDebugValue- a hook that displays a label for custom hooks in React DevTools, using useDebugValue(value) -->
+<!-- 33. React Router- a library for routing in React applications, allowing you to create single-page applications with navigation and dynamic routing -->
+<!-- 34. Redux- a state management library for JavaScript applications, often used with React to manage global state and side effects -->
+<!-- 35. React Query- a library for managing server state and caching in React applications, providing hooks for data fetching, caching, and synchronization -->
+<!-- 36. React Testing Library- a library for testing React components, focusing on testing the component's behavior and user interactions rather than implementation details -->
+<!-- 37. Jest- a JavaScript testing framework often used with React for unit and integration testing, providing features like mocking, assertions, and test runners -->
+<!-- 38. Enzyme- a testing utility for React that allows you to shallow render components, simulate events, and assert on component behavior -->
+<!-- 39. React DevTools- a browser extension for debugging React applications, providing features like component tree inspection, performance profiling, and state management -->
+<!-- 40. React Native- a framework for building mobile applications using React, allowing you to create native apps for iOS and Android using JavaScript and React components -->
+<!-- 41. Next.js- a React framework for building server-rendered applications, providing features like static site generation, API routes, and automatic code splitting -->
+<!-- 42. Gatsby- a React framework for building static websites, providing features like static site generation, image optimization, and plugin ecosystem -->
+<!-- 43. Create React App- a command-line tool for creating new React applications with a pre-configured development environment, including build tools and development server -->
+<!-- 44. React Hooks API- a set of built-in hooks provided by React for managing state and side effects in functional components, including useState, useEffect, and useContext -->
+<!-- 45. React Suspense- a feature that allows you to defer rendering part of your component tree until some condition is met, such as data fetching or code splitting -->
+<!-- 46. React.lazy- a function that allows you to dynamically import components and render them lazily, using React.lazy(() => import('./MyComponent')) -->
+<!-- 47. React.StrictMode- a wrapper component that helps identify potential problems in your application, such as deprecated APIs or side effects in render methods -->
+<!-- 48. React Profiler- a component that allows you to measure the performance of your React application, providing insights into rendering times and component updates -->
+<!-- 49. React.memo- a higher-order component that memoizes functional components to prevent unnecessary re-renders, using React.memo(MyComponent) -->
+<!-- 50. React.forwardRef- a function that allows you to forward refs to child components, using React.forwardRef((props, ref) => <ChildComponent ref={ref} {...props} />) -->
+<!-- 52. React.Suspense- a component that allows you to defer rendering part of your component tree until some condition is met, such as data fetching or code splitting -->

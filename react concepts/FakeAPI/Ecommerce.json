@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Samsung Galaxy S21",
+      "price": "3",
+      "category": "tv"
+    },
+    {
+      "id": "2",
+      "name": "vivo v20 ",
+      "price": "30000",
+      "category": "mobiles"
+    },
+    {
+      "id": "3",
+      "name": "Mac book Air ",
+      "price": 100000,
+      "category": "mobiles"
+    },
+    {
+      "name": "Hp i7",
+      "price": "500",
+      "category": "laptops",
+      "id": "4"
+    },
+    {
+      "id": "5",
+      "name": "Iphone 16 pro",
+      "price": "1234",
+      "category": "mobiles"
+    },
+    {
+      "id": 6,
+      "name": "dell",
+      "price": "123322",
+      "category": "laptops"
+    },
+    {
+      "id": 7,
+      "name": "jhan",
+      "price": "32",
+      "category": "mobiles"
+    }
+  ]
+}

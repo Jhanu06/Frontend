@@ -1,0 +1,110 @@
+
+<!-- Array Destructuring
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Array Destructuring Example</h2>
+    <p id="output"></p>
+
+<script>
+    const a=["apple","puma","suzuk"];
+    const [fruit,brand,car,coffee="bru"] =a;
+    document.getElementById("output").innerHTML=
+    "fruits: " + fruit + "<br>" +
+        "brand: " + brand + "<br>" +
+        "car: " + car+"<br>"+
+        "coffee" + coffee;
+    </script>
+  </body>
+</html> -->
+
+<!-- object Destructuring
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Object Destructuring Example</h2>
+    <p id="output"></p>
+
+    <script>
+      let student = {
+        name: "Jhanu",
+        age: 22,
+        branch: "CSM"
+      };
+
+    //   // Object Destructuring
+    //   let {name, age, branch} = student;
+
+    //   document.getElementById("output").innerHTML = 
+    //     "Name: " + name + "<br>" +
+    //     "Age: " + age + "<br>" +
+    //     "Branch: " + branch;
+
+  // Object Destructuring with renaming
+      let {name: studentName, age: studentAge, branch: studentBranch} = student;
+
+document.getElementById("output").innerHTML = 
+  "Student Name: " + studentName + "<br>" +
+  "Age: " + studentAge + "<br>" +
+  "Branch: " + studentBranch;
+    </script>
+  </body>
+</html> -->
+
+<!-- Destructuring Nested Objects
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Nested Object Destructuring</h2>
+    <p id="output"></p>
+
+    <script>
+      let student = {
+        name: "Jhanu",
+        details: {
+          age: 22,
+          branch: "CSM"
+        }
+      };
+
+      // Nested Object Destructuring
+      let {name, details: {age, branch}} = student;
+
+      document.getElementById("output").innerHTML = 
+        "Name: " + name + "<br>" +
+        "Age: " + age + "<br>" +
+        "Branch: " + branch;
+    </script>
+  </body>
+</html> -->
+
+<!-- Destructuring with Function Parameters -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+  <h2>Destructuring using function parameters with renaming</h2>
+  <p id="show"></p>
+
+  <script>
+    function display({name: studentname, roll: currentage, branch: department}) {
+      document.getElementById("show").innerHTML =
+        "Student Name: " + studentname + "<br>" +
+        "Student Age: " + currentage + "<br>" +
+        "Student Branch: " + department;
+    }
+
+    let student = {
+      name: "Jhansi",
+      roll: 32,
+      branch: "csm"
+    };
+
+    display(student);
+  </script>
+</body>
+</html>

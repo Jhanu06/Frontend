@@ -1,0 +1,118 @@
+
+<!-- DOM-DOCUMENT OBJECT MODEL
+
+//selecting/Accessing
+getElementById("para1"): 
+Finds the element with ID para1 and changes its color to red.
+
+getElementsByClassName("myClass"):
+ Finds all elements with class myClass, and changes style of each.
+
+getElementsByTagName("div"): 
+Finds all <div> tags and changes content of the first one.
+
+querySelector(".myClass"):
+ Selects the first element with class myClass and adds a yellow background.
+
+querySelectorAll("p"): 
+Selects all <p> elements and adds border to each -->
+<!-- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .myClass {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>DOM Access Methods Combined Example</h2>
+
+    <p id="para1">This is paragraph 1 (ID)</p>
+    <p class="myClass">This is paragraph 2 (Class)</p>
+    <p class="myClass">This is paragraph 3 (Class)</p>
+    <div>Div content (Tag)</div>
+    <button onclick="demo()">Click to Show Demo</button>
+
+    <script>
+      function demo() {
+        // 1. getElementById
+        document.getElementById("para1").style.color = "red";
+
+        // 2. getElementsByClassName (returns a collection)
+        let classElements = document.getElementsByClassName("myClass");
+        classElements[0].style.fontWeight = "bold"; // 1st element
+        classElements[1].style.fontStyle = "italic"; // 2nd element
+
+        // 3. getElementsByTagName (returns all <div> elements)
+        let divs = document.getElementsByTagName("div");
+        divs[0].innerHTML = "Div updated using Tag Name";
+
+        // 4. querySelector (returns first match of a CSS selector)
+        document.querySelector(".myClass").style.backgroundColor = "yellow";
+    
+        // 5. querySelectorAll (returns all matches)
+        let allParas = document.querySelectorAll("p");
+        allParas.forEach(function(p) {
+          p.style.border = "1px solid black";
+        });
+      }
+      console.log(document.head);//showing all
+      console.log(document.body); 
+
+    </script>
+  </body>
+</html>
+ -->
+
+
+// Adding/Removing Elements in DOM
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="first">
+      <p id="1">this is first para in div1</p>
+      <p id="2">this is second para in div1</p>
+    </div>
+
+    <div id="sec">
+      <p>this is first para in div2</p>
+      <p id="last">this is second para in div2</p>
+    </div>
+
+    <script>
+    //     // creation
+
+    //   // create new paragraph
+    //   var newchild = document.createElement("p");
+    //   newchild.innerHTML = "this is third para in div2";
+
+       // get parent node (div#sec)
+    //   var par = document.getElementById("sec");
+
+      // get the existing element before which we want to insert
+    //   var lastPara = document.getElementById("last");
+
+       // insert newchild before last paragraph
+    //   par.insertBefore(newchild, lastPara);
+
+    // removing
+
+    var n=document.getElementById("first");
+    var m=document.getElementById("2")
+
+    //n.removeChild(m);
+    // remove child need parent 
+ 
+    //document.getElementById("last").remove(); // remove dnt need any parent its removes
+
+    // replaces
+    var newpara=document.createElement("p");
+    newpara.innerHTML="revised para using replace";
+     n.replaceChild(newpara,m);
+     
+    </script>
+  </body>
+</html>

@@ -1,0 +1,213 @@
+
+<!--  BASICS
+
+variables-let,const,var
+
+// let city = "Hyderabad";   // You can change later
+// const country = "India";  // You cannot change
+// var isHappy = true;
+
+// console.log(city);       // Hyderabad
+// console.log(country);    // India
+// console.log(isHappy);    // true
+
+// Data types
+
+// 1.string - let name="jhanu";
+// 2.numbers- let age=32;
+// 3.boolean- let ishappy=true;
+// null(empty) - let job=null;
+// undefined - let a -> console.log(a); 
+// object(multiple values with keys) - let user{ name:"jhanu", age=32};
+// array- let fruits=["apple","banana","mango"] -->
+
+
+<!--functions--> 
+
+<!-- 
+<!doctype html>
+<html>
+    <body>
+        <h2> click the button</h2>
+        <button onclick="say()"> click me </button>
+        <script>
+            function say()
+            {
+                alert("hello !");
+            }
+        </script>
+    </body>
+</html> 
+-->
+
+
+<!--functions with paramenters-->
+
+<!-- <!doctype html>
+<html>
+    <body>
+        <h2> form </h2>
+          <input type="text" id="name" placeholder="enter name">
+          <button onclick="submitform()">submit</button>
+<p id="output"></p>
+        <script>
+            function submitform()
+            {
+                const name=document.getElementById("name").value;
+                document.getElementById("output").innerText="hello" +name;
+            }
+        </script>
+    </body>
+</html> -->
+
+
+<!--functions with return type -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Function with Return</title>
+</head>
+<body>
+
+  <h2>Add 2 Numbers</h2>
+  <input type="number" id="num1" placeholder="First number" />
+  <input type="number" id="num2" placeholder="Second number" />
+  <button onclick="calculate()">Calculate</button>
+  <p id="sumResult"></p>
+  <script>
+    function add(a, b) {
+      return a + b;
+  }
+    function calculate() {
+        // parseFloat-its converting string to number format
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+      const result = add(n1, n2);
+      document.getElementById("sumResult").innerText = "Sum: " + result;
+    }
+  </script>
+</body>
+</html> -->
+
+<!-- Arrow Functions (ES6)
+ 
+Arrow functions are a shorter way to write functions. They are especially useful for callbacks and anonymous functions.
+const greet = (name) => {
+    console.log("Hello, " + name);
+  };
+  
+  greet("Jhanu");  // Output: Hello, Jhanu
+   -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Function with Return</title>
+</head>
+<body>
+
+  <h2>Add 2 Numbers</h2>
+  <input type="number" id="num1" placeholder="First number" />
+  <input type="number" id="num2" placeholder="Second number" />
+  <button onclick="calculate()">Calculate</button>
+  <p id="sumResult"></p>
+  <script>
+    // arrow fun
+    const add = (a, b) => a + b;  
+
+    function calculate() {
+        // parseFloat-its converting string to number format
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+      const result = add(n1, n2);
+      document.getElementById("sumResult").innerText = "Sum: " + result;
+    }
+  </script>
+</body>
+</html> -->
+
+<!-- conditional statements-if,else if,else
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Age Checker</title>
+</head>
+<body>
+
+  <h2>Enter your age</h2>
+  <input type="number" id="ageInput" placeholder="Enter your age" />
+  <button onclick="checkAge()">Check</button>
+
+  <p id="output"></p>
+
+  <script>
+    function checkAge() {
+      const age = parseInt(document.getElementById("ageInput").value);
+
+      if (isNaN(age) || age <= 0) {
+        document.getElementById("output").innerText = "Please enter a valid age ❌";
+      } else if (age < 18) {
+        document.getElementById("output").innerText = "You are a Minor ❗";
+      } else {
+        document.getElementById("output").innerText = "You are an Adult ✅";
+      }
+    }
+  </script>
+
+</body>
+</html> -->
+
+
+<!-- loops-for,while,do..while -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Loop Example</title>
+</head>
+<body>
+
+  <h2> Even numbers within a range </h2>
+  <input type="number" id="num1" placeholder="enter starting number">
+  <input type="number" id="num2" placeholder="enter ending number">
+  <button onclick="print()">click</button>
+  <p id="show"></p>
+  <script>
+    function print()
+    {
+        const n1=parseInt(document.getElementById("num1").value);
+        const n2=parseInt(document.getElementById("num2").value);
+        if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("show").innerText = "Please enter valid numbers ❌";
+        return;
+      }
+      let res=0;
+
+    // for loop
+
+    //     for(let i=n1;i<=n2;i++)
+    // {
+    //     if(i%2==0)
+    // {
+    //     res=res+i+" ";
+    // }
+    // }
+    // document.getElementById("show").innerText="The even numbers with the range : "+res;
+
+    // while loop
+
+    let i=n1;
+    while(i<=n2)
+    {
+        if(i%2!=0)
+    {
+        res=res+i+" ";
+    }
+    i++;
+    }
+    document.getElementById("show").innerText="The odd numbers with the range : "+res;
+    }
+  </script>
+

@@ -1,0 +1,91 @@
+<!-- <!DOCTYPE html>
+<html>
+  <body>
+    <h2>Simple Promise Example</h2>
+    <p id="output"></p>
+    <script>
+     let order=new Promise(function(resolve,reject)
+     {
+let foodready=true;
+if(foodready)
+{
+    resolve("done");
+}
+else{
+    reject("still cooking");
+}
+     });
+     order.then(function(successmsg)
+    {
+        document.getElementById("output").innerHTML=successmsg;
+    }).catch(function(errorMsg) {
+        document.getElementById("output").innerHTML = errorMsg;
+    });
+    </script>
+  </body>
+</html> -->
+
+
+<!-- function placeorder(callback)
+{
+  setTimeout(()=>
+  {
+    console.log("order ready!");
+    callback();
+  },2000);
+}
+function delivery()
+{
+    console.log("calling from swiggy");
+}
+
+placeorder(delivery);
+
+let order=new Promise(function(resolve,reject)=>
+{
+    let readyorder=true;
+    if(readyorder)
+    {
+        resolve("order is readyyyyy mam!");
+    }
+    else{
+      reject("not ready!");
+    }
+});
+order.then((msg)=>{console.log(msg)}).catch((err)=>{console.log(err)}); -->
+
+
+//combining promises and callbacks
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Callback and Promise Example</h3>
+    <p id="show"></p>
+
+    <script>
+      // Step 1: Callback Function
+      function takeOrder(customer, callback) {
+        document.getElementById("show").innerHTML = "Order received!";
+        callback(customer);
+      }
+
+      // Step 2: Promise Function
+      function prepareOrder(customer) {
+        return new Promise((resolve, reject) => {
+          document.getElementById("show").innerHTML += "<br>Preparing your order...";
+          setTimeout(() => {
+            resolve("Order delivered successfully!");
+          }, 2000); // simulate delay of 2 sec
+        });
+      }
+
+      // Using both together
+      takeOrder("Jhanu", function(customer) {
+        prepareOrder(customer).then(function(result) {
+          document.getElementById("show").innerHTML += "<br>" + result;
+        });
+      });
+    </script>
+  </body>
+</html>

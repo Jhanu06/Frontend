@@ -1,0 +1,98 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2> arrays methods</h2>
+        <p id="show"></p>
+        <script>
+            let a=["apples","grapes","papaya"];
+
+            // push() – Add element to end
+            a.push("mango");
+
+            //pop() – Remove last element
+            a.pop();//mango deleted
+
+            //shift() – Remove first element
+            a.shift();//apples deleted
+
+            //unshift() – Add element at beginning
+            a.unshift("goa")
+
+            //concat() – Merge arrays
+            let b=["tomato","brinjal","potato"];
+            c=a.concat(b);
+            //document.getElementById("show").innerHTML=a;
+            document.getElementById("show").innerHTML=c;
+        </script>
+    </body>
+</html> -->
+
+<!-- map() – Create new array by transforming each element
+map() ante oka array lo prathi item mida manam oka function apply chestam.
+Dhani result ga oka kotha array vasthadi. Original array unchanged untundi.
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Arrow function with map()</h3>
+    <p id="result"></p>
+
+    <script>
+      let numbers = [1, 2, 3, 4, 5];
+      let squares = numbers.map(function(num) {
+        return num * num;  // square each number
+      });
+     // const squares = numbers.map(a => a * a);
+      document.getElementById("result").innerHTML = "Squares: " + squares;
+    </script>
+  </body>
+</html> -->
+
+
+<!-- //filter() ante oka array lo nundi only konni elements ni teesukoni kotha array lo petatadi,
+ condition satisfy chesthe matrame teesukuntadi.
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>filter method</h3>
+    <p id="result"></p>
+
+    <script>
+      let numbers = [1, 2, 3, 4, 5,6,7,8,9,10];
+      let even=numbers.filter(function(val)
+    {
+        return val %2===0;
+    });
+     
+     
+      document.getElementById("result").innerHTML = "evennumbers " + even;
+    </script>
+  </body>
+</html>  -->
+
+
+<!-- reduce() ante oka array lo prathi element ni oka function mida apply chesi, 
+oka value matrame return chestadi (like sum, total, average etc). -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>reduce method</h3>
+    <p id="result"></p>
+
+    <script>
+      let numbers = [1, 2, 3, 4, 5];
+
+      // reduce method: calculating sum of squares
+      let sumOfSquares = numbers.reduce(function(sum, num) {
+        return sum + num * num;
+      }, 0); // initial sum value is 0
+
+      document.getElementById("result").innerHTML = "Sum of squares: " + sumOfSquares;
+    </script>
+  </body>
+</html>

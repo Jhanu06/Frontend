@@ -1,0 +1,144 @@
+<!-- Rest Operator (...)
+The Rest operator is used to collect multiple elements and put them into an array.
+
+For Function Parameters:
+It allows you to represent an indefinite number of arguments as an array.
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>REST OPERATOR</h3>
+    <p id="result"></p>
+
+    <script>
+     function sum(...num) {
+        let total = 0;
+        for (let i of num) {
+          total += i;  // Corrected this line to use i
+        }
+        return total;
+     }
+
+     let a = sum(1, 2, 3, 4, 5, 6);
+     document.getElementById("result").innerHTML = "Sum is: " + a;
+    </script>
+  </body>
+</html> -->
+
+
+<!-- In Arrays:
+
+You can collect remaining elements in an array.
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>REST OPERATOR</h3>
+    <p id="result"></p>
+
+    <script>
+     let [first,...rest]=[1,2,3,4,5,6,7];
+     document.getElementById("result").innerHTML = first;
+     document.getElementById("result").innerHTML = rest;
+
+</script>
+  </body>
+</html> -->
+
+<!-- In Objects:
+
+Rest can also be used with objects to collect remaining properties.
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>REST OPERATOR with Objects</h3>
+    <p id="result"></p>
+
+    <script>
+      let student = {
+        name: "jhanu",
+        age: 22,
+        branch: "csm"
+      };
+
+      // Destructuring with rest
+      let { name, ...other } = student;
+
+      document.getElementById("result").innerHTML =
+        "Name: " + name + "<br>" +
+        "Other Properties: " + JSON.stringify(other);  // Show object as string
+    </script>
+  </body>
+</html> -->
+
+
+<!-- Spread Operator (...)
+The Spread operator is used to unpack or spread elements from an array or object.
+
+In Arrays:
+You can spread the elements of an array into a new array.
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>REST OPERATOR</h3>
+    <p id="result"></p>
+
+    <script>
+     let a=[1,2,3,4,5,6,7];
+     let b=[...a,8,9,10];
+     document.getElementById("result").innerHTML = b;
+
+</script>
+  </body>
+</html>  -->
+
+<!-- In Objects:
+You can copy properties from one object to another or merge multiple objects.
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>REST OPERATOR with Objects</h3>
+    <p id="result"></p>
+
+    <script>
+      let student = {
+        name: "jhanu",
+        age: 22,
+        branch: "csm"
+      };
+
+      let person = { name: "Jhanu", age: 21 };
+let contactInfo = { phone: "1234567890", email: "jhanu@gmail.com" };
+let fullInfo = { ...person, ...contactInfo };
+      document.getElementById("result").innerHTML = JSON.stringify(fullInfo);
+       </script>
+  </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>REST OPERATOR AND SPREAD OPERATOR EXAMPLE</h3>
+    <p id="result"></p>
+    <p id="show"></p>
+    <script>
+      let person = {
+  name: "Ram",
+  age: 25,
+  city: "Hyderabad",
+  country: "India"
+};
+ //rest
+let {name,...other}=person;
+    document.getElementById("result").innerHTML = "Name : " + name + "<br>" + "remaining properties : "+ JSON.stringify(other);
+
+    //spread
+    let a={...person,gender:"male"}
+    document.getElementById("show").innerHTML = JSON.stringify(a);
+
+       </script>
+  </body>
+</html>

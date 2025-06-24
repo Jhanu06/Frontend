@@ -1,0 +1,138 @@
+
+<!-- Callback Functions:
+Callback ante oka function ni vere oka function ki argument ga pampadam.
+A function ni tarvata call cheyyadam jarugutadi inside that outer function.
+After class ends, a bell rings.
+➡️ Class end = main function
+➡️ Bell ringing = callback triggered after class ends
+
+These are exactly how JavaScript callbacks work. One task finishes, and then another function is called back. -->
+
+<!-- <!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h2> simple callback function </h2>
+        <p id="show"></p>
+        <script>
+            function say(wish)
+            {
+              console.log("hello " + wish)
+            }
+            function display(callback)       //callback word is imp
+            {
+                let a=callback("good morning!");
+                document.getElementById("show").innerHTML=a;
+            }
+            display(say);
+        </script>
+    </body>
+</html> -->
+
+<!-- Callback in setTimeout (Async)
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h2> simple callback function </h2>
+        <p id="show"></p>
+        <script>
+           //setTimeout(function, milliseconds);
+
+           function fetch(callback)
+           {
+             setTimeout(function(){
+                let data="fetched"
+                callback(data);
+             },2000);
+           }
+           function show(data)
+           {
+            document.getElementById("show").innerHTML=data;
+           }
+           fetch(show);
+        </script>
+    </body>
+</html> -->
+
+<!-- Countdown Timer
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Countdown Timer</h3>
+    <p id="result"></p>
+
+    <script>
+      // Countdown function
+      function countdown(seconds) {
+        // Use a closure to hold the current seconds value
+        let currentTime = seconds;
+
+        // Function to update the timer every second
+        function updateTime() {
+          document.getElementById("result").innerHTML = "Time Remaining: " + currentTime + " seconds";
+          currentTime--; // Decrease the time
+
+          // Check if time is 0, then print "Time's up!"
+          if (currentTime >= 0) {
+            setTimeout(updateTime, 1000); // Call this function again after 1 second
+          } else {
+            document.getElementById("result").innerHTML = "Time's up!";
+          }
+        }
+
+        // Start the countdown
+        updateTime();
+      }
+
+      // Start the countdown from 5 seconds
+      countdown(5);
+    </script>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h2> simple callback function </h2>
+        <p id="show"></p>
+        <script>
+         function displayInfo(name,callback)
+         {
+          setTimeout(()=>
+        {
+            let msg="Welcome, Jhanu!";
+            callback(msg);
+        },1500);
+
+         }
+         function greet(msg)
+         {
+            document.getElementById("show").innerHTML = msg;
+         }
+         displayInfo("jhanu",greet);
+        </script>
+    </body>
+</html>
+
+<!-- Simple Real Life Example:
+
+Situation:
+You ordered food online.
+
+You give your name and your phone number (callback).
+
+Restaurant will call you after 30 mins (setTimeout).
+
+You get the call (callback function is called).
+
+So:
+
+displayInfo() = restaurant taking your details
+
+setTimeout() = delay of 30 mins
+
+callback() = restaurant calling you back = h() is called -->
